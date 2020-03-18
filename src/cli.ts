@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 import meow from 'meow';
-import mvglob from './index';
+import globmv from './index';
 
 const cli = meow(
   `
 	Usage
-    $ mvglob [options] <source-glob> <dest-dir>
+    $ globmv [options] <source-glob> <dest-dir>
 
   Options
     --help, -h         Display help.
@@ -57,7 +57,7 @@ const cli = meow(
     --follow           Follow symlinked directories when expanding ** patterns.
 
 	Example
-	  $ mvglob source/**/*.png destination/
+	  $ globmv source/**/*.png destination/
 `,
   {
     flags: {
@@ -90,5 +90,5 @@ const [source, destination] = cli.input;
   if (!cli.input.length) cli.showHelp();
   if (cli.flags.help) cli.showHelp();
   if (cli.flags.version) cli.showVersion();
-  await mvglob(source, destination, cli.flags);
+  await globmv(source, destination, cli.flags);
 })();

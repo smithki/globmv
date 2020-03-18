@@ -1,5 +1,5 @@
 {
-  "name": "mvglob",
+  "name": "globmv",
   "version": "0.1.0",
   "description": "Move files from a node script or CLI with glob support.",
   "author": "Ian K Smith <smithki707@gmail.com>",
