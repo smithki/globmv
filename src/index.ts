@@ -9,7 +9,7 @@ export type Options = Parameters<typeof glob>[1] & {
   clobber?: boolean;
 };
 
-async function mvglob(srcPattern: string, destDir: string, options?: Options) {
+async function globmv(srcPattern: string, destDir: string, options?: Options) {
   const copiedPaths: string[] = [];
   const paths = await glob(srcPattern, options);
   const mvActions = paths.map(path => {
@@ -23,4 +23,4 @@ async function mvglob(srcPattern: string, destDir: string, options?: Options) {
   return copiedPaths;
 }
 
-export default mvglob;
+export default globmv;
