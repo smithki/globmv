@@ -1,6 +1,6 @@
 {
   "name": "globmv",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Move files from a node script or CLI with glob support.",
   "author": "Ian K Smith <smithki707@gmail.com>",
   "license": "MIT",
